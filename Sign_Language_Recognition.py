@@ -99,14 +99,14 @@ if __name__ == "__main__":
                                 print('%s'%abc)
                                 
                                 #Using Amazon Polly for tts service
-                                polly_client = boto3.Session(aws_access_key_id='AKIAJPDR33VD2SK5SIAQ', aws_secret_access_key='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', region_name='us-west-2').client('polly')
+                                polly_client = boto3.Session(aws_access_key_id='', aws_secret_access_key='', region_name='us-west-2').client('polly')
                             
                                 response = polly_client.synthesize_speech(VoiceId='Aditi', OutputFormat='mp3', Text = abc)
                                 
                                 file = open('speech.mp3', 'wb')
                                 file.write(response['AudioStream'].read())
                                 file.close()
-                                playsound('/Users/juliaannjose/Documents/MinorProject/example_code/Custom-Image-Classification-using-Inception-v3/speech.mp3')
+                                playsound('path/to/mp3/file')
                             break
                     count= count -1
 
