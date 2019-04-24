@@ -59,7 +59,7 @@ if __name__ == "__main__":
         if num_frames < 10:      #to get the background, keep looking till a threshold is reached, so that our running average model gets calibrated
                 running_avg(gray, aWeight)
         else:
-            hand = segment(gray)                 # segment the hand region
+            hand = segment(gray)                 #segment the hand region
             if hand is not None:
                 (th, segmented) = hand
                 
@@ -90,23 +90,23 @@ if __name__ == "__main__":
                             score = predictions[0][node_id]
                             if score>0.3:
                                 print('%s ' %human_string)
-                                #system('say %s'%human_string)
+                                #system('say %s'%human_string)    #in English
                                 
                                 #Translation the label to Other Language: Hindi
                                 translator = Translator()
                                 ab = translator.translate('%s'%human_string, dest='hi')
                                 abc = ab.text
-                                print('%s'%abc)
+                                print('%s'%abc)       #in hindi
                                 
                                 #Using Amazon Polly for tts service
-                                polly_client = boto3.Session(aws_access_key_id='', aws_secret_access_key='', region_name='us-west-2').client('polly')
+                                polly_client = boto3.Session(aws_access_key_id='AKIAV6WU5B2I2R7W3CGI', aws_secret_access_key='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', region_name='us-west-2').client('polly')
                             
                                 response = polly_client.synthesize_speech(VoiceId='Aditi', OutputFormat='mp3', Text = abc)
                                 
                                 file = open('speech.mp3', 'wb')
                                 file.write(response['AudioStream'].read())
                                 file.close()
-                                playsound('path/to/mp3/file')
+                                playsound('/Users/juliaannjose/Documents/MinorProject/example_code/Custom-Image-Classification-using-Inception-v3/speech.mp3')
                             break
                     count= count -1
 
