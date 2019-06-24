@@ -33,4 +33,3 @@ This program will do real-time processing of images from the camera, applying bi
 ### 4. Sign to Speech
 Upon detection & recognition of the gestures, the given texts (labels) are converted to speech. Additionally, the text is translated to Hindi (from English) and with the help of Amazon polly, the text in Hindi is converted to speech. 
     
-## References
