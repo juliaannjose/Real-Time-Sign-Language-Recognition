@@ -20,11 +20,8 @@ The training dataset thus obtained is used with Google's Inception v3 model for 
 
 ## Usage Instructions
 ### 1. Creating the dataset
-    $ python 
-This will detect the foreground (hand, in this case) and apply binary thresholding to your images.
-
     $ python Data_Augmentation.py
-This will flip, rotate, resize, invert, etc your images. (I manually captured 31 images for a single sign and used this to get 800+ images from them)
+This will flip, rotate, resize, invert, etc your images. (I manually captured 31 images for a single sign and used this to get 800+ images from them). Please note that prior to this step, you will want to manually capture few images in order to apply these properties on them. 
 ### 2. Training an image classifier with [Google's Inception v3](https://www.tensorflow.org/hub/tutorials/image_retraining)  
     $ python train_data.py
 ### 3. Real-Time Recognition
