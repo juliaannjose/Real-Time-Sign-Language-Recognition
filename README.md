@@ -26,7 +26,7 @@ This will flip, rotate, resize, invert, etc your images. (I manually captured 31
     $ python train_data.py
 ### 3. Real-Time Recognition
     $ python Sign_Language_Recognition.py
-This program will do real-time processing of images from the camera, applying binary thresholding simultaneously and test these images using the classifier obtained above. 
+This program will do real-time processing of images from the camera, apply binary thresholding simultaneously and test these images using the classifier obtained above. 
 ### 4. Sign to Speech
 Upon detection & recognition of the gestures, the given texts (labels) are converted to speech. Additionally, the text is translated to Hindi (from English) and with the help of Amazon polly, the text in Hindi is converted to speech. 
     
