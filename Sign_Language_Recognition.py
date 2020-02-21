@@ -107,7 +107,7 @@ if __name__ == "__main__":
                                 file = open('speech.mp3', 'wb')
                                 file.write(response['AudioStream'].read())
                                 file.close()
-                                playsound('/Users/juliaannjose/Documents/MinorProject/example_code/Custom-Image-Classification-using-Inception-v3/speech.mp3')
+                                playsound('speech.mp3')
                             break
                     count= count -1
 
